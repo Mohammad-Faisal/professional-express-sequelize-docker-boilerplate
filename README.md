@@ -1,20 +1,4 @@
 <div id="top"></div>
-<!--
-*** Thanks for checking out the professional-express-sequelize-docker-boilerplate. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -49,7 +33,7 @@ Let me know what else can make this repo even better
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### How it was built?
+## Learn while building
 
 One key difference with other similar projects is that I documented every step in the way. Following is a series of articles that will guide you on how to build this project from absolute scratch.
 
@@ -69,7 +53,7 @@ One key difference with other similar projects is that I documented every step i
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### Built With
+## Technologies
 
 The major technologies that were used to build this project are:
 
@@ -128,7 +112,7 @@ DB_PASSWORD=dbpassword
 dbClient = await connection.sync();
 ```
 
-### Project Structure
+## Project Structure
 
 If you want to add a new route then you will goto `/routes` folder and add a new Router.
 Then register that router in the `index.ts` file under the `/routes` folder.
