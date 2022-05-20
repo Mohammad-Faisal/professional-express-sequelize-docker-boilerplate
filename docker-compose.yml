@@ -1,0 +1,53 @@
+version: '3'
+
+services:
+  database-layer:
+    image: postgres
+    container_name: database-layer
+    environment:
+      - POSTGRES_USER=dbuser
+      - POSTGRES_PASSWORD=dbpassword
+      - POSTGRES_DB=dbname
+
+    volumes:
+      - database-volume:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    networks:
+      - shared-network
+    restart: on-failure
+  express-typescript-boilerplate:
+    depends_on:
+      - database-layer
+    environment:
+      - NODE_ENV=development
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./:/usr/src/app
+    container_name: express-typescript-boilerplate
+    expose:
+      - '4000'
+    ports:
+      - '4000:4000'
+    command: npm run dev
+    networks:
+      - shared-network
+    restart: on-failure
+  adminer:
+    image: adminer
+    container_name: adminer-docker
+    depends_on:
+      - database-layer
+    ports:
+      - '8080:8080'
+    networks:
+      - shared-network
+    restart: on-failure
+
+volumes:
+  database-volume:
+
+networks:
+  shared-network:
