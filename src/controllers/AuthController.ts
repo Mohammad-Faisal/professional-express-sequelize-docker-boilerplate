@@ -7,8 +7,7 @@ import { Service } from 'typedi';
 @Service()
 export default class AuthController {
   /**
-   * @param userService
-   * We are injecting the instance of userService into the controller
+   * Dependency Injection in Action
    * More info: https://www.mohammadfaisal.dev/blog/dependency-injection-in-nodejs
    */
   constructor(public userService: UserService) {}

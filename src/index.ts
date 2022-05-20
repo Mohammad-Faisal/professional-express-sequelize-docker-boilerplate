@@ -7,16 +7,19 @@ import Config from './config/Config';
 import routes from './routes';
 import http from 'http';
 import cors from 'cors';
+import swaggerUi from 'swagger-ui-express';
+import { swaggerDocument } from '../swagger';
 import { Sequelize } from 'sequelize/types';
 import connection from './services/SequelizeClient';
 
 const app: Application = express();
-const PORT = Config.port || 3000;
+const PORT = Config.port || 4000;
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(routes);
+app.use('/api/v1', routes);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use((req: Request, res: Response, next: NextFunction) => next(new NotFoundError(req.path)));
 

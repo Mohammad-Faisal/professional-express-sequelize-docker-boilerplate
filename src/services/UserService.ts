@@ -6,11 +6,6 @@ import { User } from '../models/User';
 
 @Service()
 export default class UserService {
-  /**
-   * @param logger
-   * We are injecting the logger here.
-   * Use this -> this.logger.info('some log')
-   */
   constructor(public userRepository: UserRepository, public logger: LoggerClient) {}
 
   signUp = async (email: string, name: string, password: string) => {
@@ -27,7 +22,7 @@ export default class UserService {
     if (userWithEmail.password.toString() !== password) {
       throw new ApplicationError('Password did not match');
     }
-    return 'Successfully Signed IN';
+    return 'Successfully Signed In';
   };
 
   getAllUsers = async () => {

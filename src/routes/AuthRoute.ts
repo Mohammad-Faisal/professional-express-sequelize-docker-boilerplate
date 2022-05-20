@@ -9,6 +9,7 @@ const router = express.Router();
 
 /**
  * We are using TypeDI to get the UserService instance from our dependency container
+ * More info: https://www.mohammadfaisal.dev/blog/dependency-injection-in-nodejs
  */
 const authController = Container.get(AuthController);
 
