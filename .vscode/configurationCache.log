@@ -1,1 +1,0 @@
-{"buildTargets":["build-dev-image","build-local-image","down","kube-deploy","kube-serve","kubepath","push-dev-image","run-local-image","stop-local-image","up","up-prod"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
