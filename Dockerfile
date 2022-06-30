@@ -12,4 +12,4 @@ EXPOSE 4000
 
 RUN npm run build
 
-CMD [ "node", "dist/index.js" ]
+CMD [ "node", "dist/src/index.js" ]
