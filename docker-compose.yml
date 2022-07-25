@@ -26,6 +26,7 @@ services:
       dockerfile: Dockerfile.dev
     volumes:
       - ./:/usr/src/app
+      - /usr/src/app/node_modules
     container_name: express-typescript-boilerplate
     expose:
       - '4000'
