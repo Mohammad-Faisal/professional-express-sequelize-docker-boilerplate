@@ -15,6 +15,8 @@
 
 ## About The Project
 
+You can find the full documentation [here](https://express-typescript-boilerplate-documentation.vercel.app/)
+
 There are a lot of section that goes into creating a production grade NodeJS application. In this repository I tried to gather as much as possible. This is an ExpressJS application with the following features.
 
 - Typescript all the way
